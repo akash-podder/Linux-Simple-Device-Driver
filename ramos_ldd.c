@@ -36,6 +36,7 @@ struct proc_ops my_driver_proc_ops = {
     .proc_read = ramos_read
 };
 
+// Constructor
 static int ramos_module_init(void) {
     printk("ramos_module_init: Entry\n");
     
@@ -50,6 +51,8 @@ static int ramos_module_init(void) {
     return 0;
 }
 
+
+// Destructor
 static void ramos_module_exit(void) {
     printk("ramos_module_exit: Entry\n");
 
